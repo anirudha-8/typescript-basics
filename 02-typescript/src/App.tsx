@@ -1,12 +1,12 @@
 import "./App.css";
-import Person from "./components/Person";
+import UserList from "./components/UserList";
+import { UserProvider } from "./UserContextProvider";
 
 function App() {
   return (
-    <>
-      <Person name="Anirudha" age={23} isMarried={false} />
-      <Person name="Omkar" age={28} isMarried={true} />
-    </>
+    <UserProvider>
+      <UserList />
+    </UserProvider>
   );
 }
 
